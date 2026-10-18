@@ -1,0 +1,32 @@
+# Secrets and environment
+.env
+*.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Testing & caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local data & logs
+*.db
+*.sqlite
+*.log
+.pg
+.pg.jar
+
+# OS
+.DS_Store
+Thumbs.db

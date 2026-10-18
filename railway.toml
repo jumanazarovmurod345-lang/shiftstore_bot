@@ -1,0 +1,14 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# Запуск миграций перед поднятием нового контейнера (Railway pre-deploy phase)
+preDeployCommand = ["alembic", "upgrade", "head"]
+startCommand = "python -m app"
+healthcheckPath = "/health"
+healthcheckTimeout = 100
+restartPolicyType = "on-failure"
+restartPolicyMaxRetries = 5
+drainingSeconds = 25
+overlapSeconds = 10
