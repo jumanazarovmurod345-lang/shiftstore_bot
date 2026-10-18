@@ -30,5 +30,5 @@ USER appuser
 
 EXPOSE 8000
 
-# Запуск FastAPI сервиса через модуль app
-CMD ["python", "-m", "app"]
+# Запуск миграций и FastAPI сервиса через модуль app
+CMD ["sh", "-c", "alembic upgrade head && python -m app"]

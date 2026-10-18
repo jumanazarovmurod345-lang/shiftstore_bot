@@ -4,7 +4,7 @@ dockerfilePath = "Dockerfile"
 
 [deploy]
 # Запуск миграций перед поднятием нового контейнера (Railway pre-deploy phase)
-preDeployCommand = ["alembic", "upgrade", "head"]
+preDeployCommand = ["alembic upgrade head"]
 startCommand = "python -m app"
 healthcheckPath = "/health"
 healthcheckTimeout = 100
